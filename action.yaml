@@ -14,6 +14,9 @@ inputs:
     description: "Buildkit version to use with Copa"
   copa-version:
     description: "Copa version to use"
+  buildkitd-address:
+    description: "Address of buildkitd service"
+    default: "tcp://127.0.0.1:8888"
 outputs:
   patched-image:
     description: 'Image reference of patched image'

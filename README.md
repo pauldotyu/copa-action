@@ -24,6 +24,10 @@ This action patches vulnerable containers using [Copa](https://github.com/projec
 
 **Optional** The Copa version used in the action, default is latest.
 
+## `buildkitd-address`
+
+**Optional** The address of buildkitd service, default is `tcp://127.0.0.1:8888`.
+
 ## Output
 
 ## `patched-image`
@@ -77,6 +81,8 @@ jobs:
             buildkit-version: 'v0.11.6'
             # optional, default is latest
             copa-version: '0.3.0'
+            # optional, default is tcp://127.0.0.1:8888
+            buildkitd-address: 'unix:///var/run/docker.sock`
 
         - name: Login to Docker Hub
           if: steps.copa.conclusion == 'success'
